@@ -145,20 +145,18 @@
 
     <script>
         window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.getElementById('loading-popup').style.display = 'none';
-                document.getElementById('login-container').style.display = 'block';
-            }, 2000); // Adjust the delay as needed
+    setTimeout(function() {
+        document.getElementById('loading-popup').style.display = 'none';
+        document.getElementById('login-container').style.display = 'block';
+        showMessage(); // Chamando showMessage após 5 segundos
+    }, 5000); // Ajustando o tempo para 5000 milissegundos (5 segundos)
 
-            // Function to show message popup
-            function showMessage() {
-                const messagePopup = document.getElementById('message-popup');
-                messagePopup.style.display = 'block';
-            }
-
-            // Show the message every 5 seconds
-            setInterval(showMessage, 5000);
-        });
+    // Função para mostrar a mensagem popup
+    function showMessage() {
+        const messagePopup = document.getElementById('message-popup');
+        messagePopup.style.display = 'block';
+    }
+});
     </script>
 </body>
 </html>
